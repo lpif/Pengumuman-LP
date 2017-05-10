@@ -36,3 +36,11 @@ WID=$(xdotool search --onlyvisible --class chromium|head -1)
 xdotool windowactivate ${WID}
 xdotool key ctrl+F5
 ```
+
+## Change Timezore Raspy
+1. sudo raspi-config
+2. Internationalization options
+3. Change Time Zone
+4. Select geographical area
+5. Select city or region.
+6. Reboot your pi.
