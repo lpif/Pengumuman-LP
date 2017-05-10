@@ -2,6 +2,7 @@
 
 ## Setup
 * sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
+
 * And paste this :
 ```
 @xset s noblank
@@ -12,4 +13,26 @@
 
 @chromium-browser --incognito --kiosk http://reservasi.lp.if.its.ac.id
 
+```
+
+* If want auto refresh, add this :
+```
+@nohup /home/pi/Desktop/reservasi/run.sh & </dev/null
+```
+
+* run.sh
+```
+#!/bin/bash
+while true
+do
+    bash /home/pi/Desktop/reservasi/refresh.sh
+    sleep 60
+done
+```
+
+* refresh.py
+```
+WID=$(xdotool search --onlyvisible --class chromium|head -1)
+xdotool windowactivate ${WID}
+xdotool key ctrl+F5
 ```
