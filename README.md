@@ -2,7 +2,7 @@
 
 ## Setup
 * sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
-* 
+* And paste this :
 ```
 @xset s noblank
 
