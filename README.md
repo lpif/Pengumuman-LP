@@ -37,7 +37,7 @@ xdotool windowactivate ${WID}
 xdotool key ctrl+F5
 ```
 
-## Change Timezore Raspy
+## Change Timezone Raspy
 1. sudo raspi-config
 2. Internationalization options
 3. Change Time Zone
