@@ -16,8 +16,6 @@
 				box-shadow: rgba(0,0,0,0.117647) 0px 1px 6px, rgba(0,0,0,0.117647) 0px 1px 4px;
 				border-radius: 2px;
 				margin-left: 190px;
-				display: inline-block;
-				vertical-align: middle;
 			}
 			#cardContainerL > h2{
 				font-family: Roboto, sans-serif;
@@ -35,12 +33,6 @@
 				padding: 30px;
 				margin-left: 50px;
 				margin-top: -400px;
-				display: inline-block;
-				vertical-align: middle;
-				animation-name: one;
-				animation-duration: 6s;
-				animation-delay: 2s;
-				animation-iteration-count: infinite;
 			}
 			#cardContainerR{
 				float: right;
@@ -53,8 +45,6 @@
 				border-radius: 2px;
 				margin-top: -497px;
 				margin-right: 23px;
-				display: inline-block;
-				vertical-align: middle;
 			}
 			#cardContainerR > h2{
 				font-family: Roboto, sans-serif;
@@ -70,13 +60,7 @@
 				border-radius: 2px;
 				padding: 30px;
 				margin-top: -400px;
-				display: inline-block;
-				vertical-align: middle;
 			}
 			#detail{
 				padding: 10px;
-			}
-			@keyframes one{
-				from {position: relative;}
-				to {transform: rotateY(180deg);}
 			}
