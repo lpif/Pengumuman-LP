@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'gotham';
+  src: url('localhost/Pengumuman-LP/assets/fonts/gotham/GOTHAM-BLACK.TTF');
+}
+
+
+@font-face {
+  font-family: 'caslon';
+  src: url('localhost/Pengumuman-LP/assets/fonts/caslon/CaslonCP.otf');
+}
+
+.white-font {
+  color: white;
+}
+
+.gotham-font {
+  font-family: 'gotham';
+}
+
+.caslon-font {
+  font-family: 'caslon';
+}
+
+nav {
+  height: 55px;
+}
+
+#current-date {
+  margin-top: 0.5rem;
+}
+
+#current-date, #current-time {
+  font-size: 20px;
+}
+
+#logo-row {
+  position: relative;
+  height: 180px;
+  resize: both;
+}
+
+#main-logo {
+  height: 120px;
+  width: auto;
+  margin-top: 1rem;
+}
+
+#status-text {
+  font-size: 30px;
+}
+
+#event-name-box {
+  margin-top: 5px;
+  height: 70px;
+}
+
+#event-name {
+  font-size: 30px;
+  color: white;
+  margin-top: 0.7rem;
+}
+
+#event-time {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.passive-time {
+  color: white;
+}
+
+#next-event-row {
+  margin-top: 1rem;
+}
+
+#next-event-box-header {
+  color: white;
+  font-size: 20px;
+}
+
+#next-event-name, #next-event-time {
+  font-size: 20px;
+}
+
+#footer {
+  margin-top: 0.5rem;
+}
+
