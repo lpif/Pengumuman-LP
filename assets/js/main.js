@@ -19,7 +19,7 @@ var COLOR = {
 
 $(document).ready(function() {
   var timerInterval = 100;
-  var ajaxRequestInterval = 5000;
+  var ajaxRequestInterval = 10000;
 
   deleteServerTime();
   getNewTime();
@@ -72,7 +72,7 @@ function renderStatus() {
   if (closure.currentEvent === null) {
     currentEventComponent = '<div class="row"><div class="col-12 gotham-font" id="status-text"><center>There is no event, you can use the lab</center></div></div><div id="event-info"><div class="row"><div class="col-6 offset-3" id="event-name-box"><center><div class="caslon-font" id="event-name">-</div></center></div></div><div class="row" id="event-time"><div class="col-6 offset-3"><center><div class="caslon-font passive-time" id="event-time">-</div></center></div></div></div>';
   } else {
-    currentEventComponent = '<div class="row"><div class="col-12 gotham-font" id="status-text"><center>Currently In Use</center></div></div><div id="event-info"><div class="row"><div class="col-6 offset-3" id="event-name-box"><center><div class="caslon-font" id="event-name">' + closure.currentEvent.eventName + '</div></center></div></div><div class="row" id="event-time"><div class="col-6 offset-3"><center><div class="caslon-font" id="event-time">' + closure.currentEvent.eventTime + '</div></center></div></div></div>';
+    currentEventComponent = '<div class="row"><div class="col-12 gotham-font" id="status-text"><center>Currently In Use</center></div></div><div id="event-info"><div class="row"><div class="col-6 offset-3 marque-box" id="event-name-box"><center><div class="caslon-font" id="event-name">' + closure.currentEvent.eventName + '</div></center></div></div><div class="row" id="event-time"><div class="col-6 offset-3"><center><div class="caslon-font" id="event-time">' + closure.currentEvent.eventTime + '</div></center></div></div></div>';
   }
   $('#status').html(currentEventComponent);
 }
@@ -82,7 +82,7 @@ function renderNextEvent() {
   if (closure.nextEvent === null) {
     nextEventComponent = '<div class="col-3 offset-8" id="next-event-box"><div class="row"><div class="col-12 gotham-font" id="next-event-box-header">Today Upcoming Event</div></div><div class="row"><div class="col-12 caslon-font" id="next-event-name">-</div></div><div class="row"><div class="col-12 caslon-font white-font" id="next-event-time">-</div></div></div></div>';
   } else {
-    nextEventComponent = '<div class="col-3 offset-8" id="next-event-box"><div class="row"><div class="col-12 gotham-font" id="next-event-box-header">Today Upcoming Event</div></div><div class="row"><div class="col-12 caslon-font" id="next-event-name">' + closure.nextEvent.eventName + '</div></div><div class="row"><div class="col-12 caslon-font" id="next-event-time">' + closure.nextEvent.eventTime + '</div></div></div></div>';
+    nextEventComponent = '<div class="col-3 offset-8" id="next-event-box"><div class="row"><div class="col-12 gotham-font" id="next-event-box-header">Today Upcoming Event</div></div><div class="row"><div class="col-12 caslon-font marque-box next-event-marque-box" id="next-event-name">' + closure.nextEvent.eventName + '</div></div><div class="row"><div class="col-12 caslon-font" id="next-event-time">' + closure.nextEvent.eventTime + '</div></div></div></div>';
   }
   $('#next-event-row').html(nextEventComponent);
 }

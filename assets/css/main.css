@@ -57,9 +57,11 @@ nav {
 #event-name-box {
   margin-top: 5px;
   height: 70px;
-  
   width: 450px;
   margin: 0 auto;
+}
+
+.marque-box {
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
@@ -92,6 +94,10 @@ nav {
 
 #next-event-name, #next-event-time {
   font-size: 20px;
+}
+
+.next-event-marque-box {
+  animation: marquee 100s linear infinite;
 }
 
 #footer {
