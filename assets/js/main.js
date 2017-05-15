@@ -2,7 +2,9 @@ var closure = {
   currentEvent: null,
   nextEvent: null,
   connectionError: false,
-  currentTime: moment()
+  serverTime: moment($('#dummy-server-time').text(), 'DD-MM-YYYY HH:mm:ss'),
+  currentTime: moment(),
+  serverClientTimeDiff: moment($('#dummy-server-time').text(), 'DD-MM-YYYY HH:mm:ss').diff(moment())
 };
 
 var todayEventsUrl = 'http://api.lp.if.its.ac.id/api/v1/schedules/{today}';
@@ -19,6 +21,7 @@ $(document).ready(function() {
   var timerInterval = 100;
   var ajaxRequestInterval = 5000;
 
+  deleteServerTime();
   getNewTime();
   ajaxRequest();
 
@@ -91,9 +94,10 @@ function render() {
 }
 
 function renderTime() {
-  var currentDateText = closure.currentTime.format('dddd, DD MMMM YYYY');
-  var currentTimeText = closure.currentTime.format('hh : mm : ss a');
-
+  var tempCurrentTime = closure.currentTime;
+  tempCurrentTime.add(closure.serverClientTimeDiff);
+  var currentDateText = tempCurrentTime.format('dddd, DD MMMM YYYY');
+  var currentTimeText = tempCurrentTime.format('hh : mm : ss a');
   $('#current-date').text(currentDateText);
   $('#current-time').text(currentTimeText);
 }
@@ -105,9 +109,13 @@ function getNewTime() {
   }
 }
 
+function deleteServerTime() {
+  $('#dummy-server-time').text('');
+}
+
 function ajaxRequest() {
   var today = moment().format('YYYY-MM-DD');
-  var currentTime = moment();
+  var currentTime = moment().add(closure.serverClientTimeDiff);
   $.ajax(_.replace(todayEventsUrl, '{today}', today))
     .done(function(result) {
       var currentEvent = null;

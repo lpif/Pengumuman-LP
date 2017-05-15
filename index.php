@@ -19,6 +19,13 @@
     <nav class="navbar navbar-light"></nav>
 
     <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" id="dummy-server-time">
+            <?php
+                echo date('d-m-Y H:i:s');
+            ?>
+        </div>
+      </div>
       <div class="row" id="current-date-row">
         <div class="col-3 caslon-font" id="current-date">
         </div>
