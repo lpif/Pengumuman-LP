@@ -48,10 +48,22 @@ nav {
 #status-text {
   font-size: 30px;
 }
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -500em }
+}
 
 #event-name-box {
   margin-top: 5px;
   height: 70px;
+  
+  width: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 50s linear infinite;
 }
 
 #event-name {
