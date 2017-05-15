@@ -55,8 +55,8 @@ nav {
 }
 
 #event-name-box {
-  margin-top: 5px;
-  height: 70px;
+  margin-top: 10px;
+  height: 80px;
   width: 450px;
   margin: 0 auto;
 }
@@ -69,13 +69,13 @@ nav {
 }
 
 #event-name {
-  font-size: 30px;
+  font-size: 40px;
   color: white;
   margin-top: 0.7rem;
 }
 
 #event-time {
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 5px;
 }
 
