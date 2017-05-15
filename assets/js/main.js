@@ -118,6 +118,8 @@ function ajaxRequest() {
   var currentTime = moment().add(closure.serverClientTimeDiff);
   $.ajax(_.replace(todayEventsUrl, '{today}', currentTime.format('YYYY-MM-DD')))
     .done(function(result) {
+      changeCurrentEvent(null);
+      changeNextEvent(null);
       var currentEvent = null;
       var nextEvent = null;
 
